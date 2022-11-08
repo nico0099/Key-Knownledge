@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/gradient2"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:background="@color/color_app_background2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:fontFamily="sans-serif-black"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="30dp"
+                android:text="V."/>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_round_account_circle_24"/>
+                    <TextView
+                        android:id="@+id/player1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="nickname1"/>
+                </LinearLayout>
+                <ProgressBar
+                    android:id="@+id/progressBar1"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:indeterminate="false"
+                    android:layout_marginTop="10dp"
+                    android:maxHeight="10dip"
+                    android:minHeight="10dip"
+                    android:progress="1"
+                    android:progressDrawable="@drawable/greenprogress" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@drawable/ic_round_account_circle_24"/>
+                    <TextView
+                        android:id="@+id/player2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="10dp"
+                        android:fontFamily="sans-serif-smallcaps"
+                        android:text="nickname2"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="10dp"
+                        android:fontFamily="sans-serif-thin"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="10dp"
+                        android:textColor="@color/white"
+                        android:text="Sta rispondendo"/>
+                    <com.airbnb.lottie.LottieAnimationView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="center"
+                        app:lottie_autoPlay="true"
+                        app:lottie_loop="true"
+                        app:lottie_fileName="points.json"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/numDomanda"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-smallcaps"
+            android:textSize="18dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:text="Domanda n. x"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_margin="10dp"
+            android:layout_height="30dp">
+
+            <TextView
+                android:id="@+id/livDomanda"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white"
+                android:layout_centerInParent="true"
+                android:layout_alignParentLeft="true"
+                android:fontFamily="sans-serif-smallcaps"
+                android:textSize="15dp"
+                android:text="Livello 1"/>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iconCat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:src="@drawable/storia"/>
+                <TextView
+                    android:id="@+id/catDomanda"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:layout_gravity="start|bottom"
+                    android:textSize="15dp"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:text="categoria"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/domanda"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="20dp"
+            android:gravity="center_horizontal"
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:fontFamily="sans-serif-thin"
+            android:text="Domanda"/>
+
+        <LinearLayout
+            android:id="@+id/answers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:onClick="onClickAnswer"
+                android:tag="1"
+                android:id="@+id/b1"
+                android:layout_width="320dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradient3"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/circleb1"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:text="A"
+                    android:gravity="center"
+                    android:backgroundTint="#e6045d"
+                    android:background="@drawable/ic_baseline_lens_24"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textb1"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="start|center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="12dp"
+                    android:text="risposta 1"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="onClickAnswer"
+                android:tag="2"
+                android:id="@+id/b2"
+                android:layout_width="320dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradient3"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/circleb2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:text="B"
+                    android:gravity="center"
+                    android:backgroundTint="#e6045d"
+                    android:background="@drawable/ic_baseline_lens_24"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textb2"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="start|center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="12dp"
+                    android:text="risposta 2"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="onClickAnswer"
+                android:tag="3"
+                android:id="@+id/b3"
+                android:layout_width="320dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradient3"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/circleb3"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:text="C"
+                    android:gravity="center"
+                    android:backgroundTint="#e6045d"
+                    android:background="@drawable/ic_baseline_lens_24"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textb3"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="start|center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="12dp"
+                    android:text="risposta 3"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:onClick="onClickAnswer"
+                android:tag="4"
+                android:id="@+id/b4"
+                android:layout_width="320dp"
+                android:layout_gravity="center"
+                android:background="@drawable/gradient3"
+                android:layout_margin="15dp"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/circleb4"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:textSize="20dp"
+                    android:fontFamily="sans-serif-black"
+                    android:textColor="@color/white"
+                    android:text="D"
+                    android:gravity="center"
+                    android:backgroundTint="#e6045d"
+                    android:background="@drawable/ic_baseline_lens_24"/>
+                <TextView
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/textb4"
+                    android:layout_width="200dp"
+                    android:layout_height="50dp"
+                    android:gravity="start|center"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/black"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textSize="12dp"
+                    android:text="risposta 4"/>
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <Button
+                    android:onClick="next"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/gradient3"
+                    android:text="CONFERMA"
+                    android:backgroundTint="#bb0446"
+                    android:textColor="@color/white"
+                    android:textSize="12dp"
+                    android:fontFamily="sans-serif-black"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="invisible"
+        android:id="@+id/lottieRight"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_speed="1.5"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="right.json"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:visibility="invisible"
+        android:id="@+id/lottieWrong"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        app:lottie_speed="1.5"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="wrong.json"/>
+
+
+    <!--<TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/numDomanda"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:text="DOMANDA n.0"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/catDomanda"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:text="categoria 0"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/livDomanda"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:text="livello 0"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/domanda"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="100dp"
+        android:text="DOMANDA"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/answers"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        >
+        <Button
+            android:id="@+id/b1"
+            android:tag="1"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="risposta1"
+            android:backgroundTint="@color/white"
+            />
+        <Button
+            android:id="@+id/b2"
+            android:tag="2"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="risposta2"
+            android:backgroundTint="@color/white"
+            />
+        <Button
+            android:id="@+id/b3"
+            android:tag="3"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="risposta3"
+            android:backgroundTint="@color/white"
+            />
+        <Button
+            android:id="@+id/b4"
+            android:tag="4"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:text="risposta4"
+            android:backgroundTint="@color/white"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/result"
+        android:text="risultato"
+        android:visibility="invisible"
+        android:layout_below="@id/answers"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="80dp"
+        android:textSize="30sp"
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CONFERMA"
+        android:onClick="next"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        />-->
+
+</RelativeLayout>

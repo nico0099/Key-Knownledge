@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.keyknowledge.MainActivity">
+
+
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:src="@mipmap/scritta_key"/>
+
+    <!--<com.airbnb.lottie.LottieAnimationView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        app:lottie_autoPlay="true"
+        app:lottie_speed="0.08"
+        app:lottie_loop="true"
+        app:lottie_fileName="cervello2.json"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:textSize="15dp"
+            android:fontFamily="sans-serif-black"
+            android:textColor="@color/white"
+            android:background="@color/color_app_background2"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:text="Home"
+            />
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_baseline_person_outline_24"
+            android:backgroundTint="@color/white"
+            android:layout_marginTop="10dp"
+            android:onClick="showNavigation"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/ic_baseline_settings_24"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:onClick="showSettings"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            />
+        </RelativeLayout>
+
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_fileName="46147-background2.json"
+            />
+
+    </LinearLayout>
+
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieStart"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="100dp"
+        android:onClick="startMatch"
+        app:lottie_speed="1.3"
+        app:lottie_autoPlay="false"
+        app:lottie_fileName="play.json"/>
+    <LinearLayout
+        android:id="@+id/layoutModes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/classicMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:elevation="20dp"
+            android:onClick="onClickMode"
+            style="@style/AudioFileInfoOverlayText"
+            android:text="Classic Mode"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieClassic"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            android:visibility="invisible"
+            app:lottie_speed="1.2"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="check.json"/>
+
+        <TextView
+            android:id="@+id/restartMode"
+            android:layout_width="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_height="wrap_content"
+            android:onClick="onClickMode"
+            style="@style/AudioFileInfoOverlayText"
+            android:text="Restart Mode"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieRestart"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="10dp"
+            app:lottie_speed="1.2"
+            app:lottie_autoPlay="true"
+            app:lottie_fileName="check.json"/>
+        <TextView
+            android:id="@+id/miscMode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-smallcaps"
+            android:onClick="onClickMode"
+            style="@style/AudioFileInfoOverlayText"
+            android:text="Misc Mode"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieMisc"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_marginBottom="100dp"
+            android:visibility="invisible"
+            app:lottie_speed="1.2"
+            app:lottie_autoPlay="false"
+            app:lottie_fileName="check.json"/>
+
+    </LinearLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/menulaterale"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:contentDescription="navigation view"
+        android:layout_alignParentRight="true"
+        app:headerLayout="@layout/drawer_top"
+        app:itemIconTint="@color/black"
+        android:visibility="invisible"
+        android:theme="@style/Animation.Design.BottomSheetDialog"
+        app:menu="@menu/drawer_menu"/>
+
+</RelativeLayout>

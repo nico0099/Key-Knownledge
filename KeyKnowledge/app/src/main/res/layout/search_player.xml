@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/gradient2"
+    tools:context=".Pairing"
+    android:layout_height="match_parent">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieConnection"
+        android:visibility="visible"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_centerInParent="true"
+        app:lottie_fileName="connection.json"
+        />
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/startMatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textSize="12dp"
+        android:textColor="@color/white"
+        android:layout_centerInParent="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="150dp"
+        android:text="La partita sta per iniziare..."/>
+
+    <LinearLayout
+        android:id="@+id/linearForSearch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="80dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerInParent="true">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:text="Ricerca di un avversario in corso"
+            android:fontFamily="sans-serif-thin"
+            android:layout_marginBottom="10dp"
+            android:textSize="15dp"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:lottie_autoPlay="true"
+            android:layout_gravity="center"
+            app:lottie_loop="true"
+            app:lottie_fileName="load.json"/>
+        <TextView
+            android:id="@+id/userNick"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:fontFamily="sans-serif-smallcaps"
+            android:layout_marginTop="50dp"
+            android:text="nickname"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/user1Nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="280dp"
+        android:layout_marginLeft="80dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="nickname1"/>
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/user2Nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="280dp"
+        android:layout_marginRight="80dp"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="nickname2"/>
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/lottieCount"
+        android:visibility="invisible"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        app:lottie_fileName="count.json"/>
+
+</RelativeLayout>

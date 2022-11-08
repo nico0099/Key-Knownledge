@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context="com.example.keyknowledge.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@color/black">
+
+            <com.airbnb.lottie.LottieAnimationView
+                android:layout_marginTop="20dp"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                app:lottie_autoPlay="true"
+                app:lottie_loop="true"
+                app:lottie_fileName="8198-brain-level.json"/>
+
+
+        </LinearLayout>
+        <TextView
+            android:id="@+id/testoChiave"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:layout_gravity="center"
+            android:textSize="18dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-thin"
+            android:text="CLICCA SULLA CHIAVE\nPER ACCEDERE A KEY KNOWNLEDGE"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:layout_marginTop="15dp"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:onClick="login"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            app:lottie_fileName="key4.json"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/readyForQuiz"
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:gravity="center"
+        android:background="@mipmap/ready_quiz2"
+        android:layout_centerInParent="true"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <!--<Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REGISTRATI"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/sign_in"
+            android:onClick="register"
+            />
+            />-->
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

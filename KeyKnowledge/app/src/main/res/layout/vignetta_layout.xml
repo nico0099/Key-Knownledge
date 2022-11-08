@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#c1bebf">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/color_app_background2"
+            android:fontFamily="sans-serif-black"
+            android:textSize="12dp"
+            android:gravity="center"
+            android:text="FUNZIONAMENTO"
+            android:textColor="@color/white" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:gravity="center"
+            android:layout_margin="10dp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif"
+            android:text="In questa pagina puoi vedere il tuo livello di Knowledge per ogni categoria e anche la tua Knowledge media. Ogni volta che rispondi a una domanda correttamente incrementerai la tua KNOWLEDGE. lo STORICO è l'elenco delle domande a cui hai risposto, non potrai visionarlo. L'IA lo conserverà e lo userà per farti domande sempre più difficili in base alle tue conoscenze. Clicca su Einstain per riaprire questa finestra. Buona fortuna!"
+            />
+
+        <Button
+            android:id="@+id/buttonHoCapito"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:textSize="10dp"
+            android:background="@android:drawable/alert_dark_frame"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="Ho CAPITO"
+            android:textColor="@color/black" />
+    </LinearLayout>
+
+
+</RelativeLayout>

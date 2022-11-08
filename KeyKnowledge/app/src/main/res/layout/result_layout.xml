@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="400dp"
+    android:layout_gravity="center"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="LA TUA PARTITA"
+        android:gravity="center"
+        android:background="@color/color_app_background2"
+        />
+
+    <ListView
+        android:background="#C0C0C0"
+        android:id="@+id/listViewAnswers"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/closeButtonDialog"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@drawable/gradient4"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:layout_margin="10dp"
+            android:text="X"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
